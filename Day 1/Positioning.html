@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positioning</title>
+        <style>
+         .sticky{
+            position: sticky;
+            top: 10px;
+            left: 5px;
+            right: 20px;
+            bottom: 10px;
+            border: 5px solid green;
+            font-size: larger;
+            font-weight: 1000;
+         }
+         .fixed{
+            position: fixed;
+            right: 10px;
+            left: 700px;
+         }
+         .relative{
+            position: relative;
+            right: 10px;
+            left: 60px;
+            font-size: larger;
+            border: 5px solid red;
+         }
+         .absolute{
+            position: absolute;
+            right: 100px;
+            left:60px;
+            border: 5px solid red;
+         }
+        </style>
+    </head>
+    <body>
+        <div>
+        <div class="sticky">
+            This is my Sticky text example
+        </div>
+        <br>
+        <br>
+        <div class="fixed">
+        Professionally printed material in English typically does not indent the first paragraph, but indents those that follow.
+        For example, Robert Bringhurst states that we should "Set opening paragraphs flush left."[2] Bringhurst explains as
+        follows:
+        
+        The function of a paragraph is to mark a pause, setting the paragraph apart from what precedes it. If a paragraph is
+        preceded by a title or subhead, the indent is superfluous and can therefore be omitted.[2]
+        
+        The Elements of Typographic Style states that "at least one en [space]" should be used to indent paragraphs after the
+        first,[2] noting that that is the "practical minimum".[3] An em space is the most commonly used paragraph indent.[3]
+        Miles Tinker, in his book Legibility of Print, concluded that indenting the first line of paragraphs increases
+        readability by 7%, on average.[4]
+        </div>
+        <br>
+        <br>
+        <div class="relative">
+            This is my Relative Text
+            <div class="absolute">
+                Absolute text in DIV
+            </div>
+        </div>
+    </body>
+    </html>
