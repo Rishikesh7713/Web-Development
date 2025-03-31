@@ -3,9 +3,7 @@
     <head>
         <title>Cars</title>
         <style>
-            *{
-                background-color: blanchedalmond;
-            }
+           
             .p1{
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 text-decoration: underline;
@@ -14,18 +12,63 @@
             table{
                 background-color: blue;
             }
+            header{
+                background-color: blue;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .nav{
+                background-color: blueviolet;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .nav div{
+                width: 120px;
+                background-color: white;
+                margin: 5px;
+                padding: 10px;
+                border: 4px solid black;
+            }
+            .div2{
+                background-color: red;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .images{
+                background-color: chartreuse;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            li{
+                color: red;
+            }
+            .div1{
+                background-color: aqua;
+                display: flex;
+                color: chocolate;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
-        <h1>Welcome to the Car Encyclopidea</h1>
-        <img src="car.jpg" alt="car">
+        <header><h1>Welcome to the Car Encyclopidea</h1><img src="car.jpg" alt="car"></header>
         <br>
-        <p class="p1">A car, or an automobile, is a motor vehicle with wheels. Most definitions of cars state that they run
+        <div class="nav">
+            <div><a href="file:///C:/Users/ponnu/OneDrive/%E7%94%BB%E5%83%8F/Codingal%20stuff/Web%20Development/Web-Development/Day%201/Cars.html">Home</a></div>
+            <div><a href="file:///C:/Users/ponnu/OneDrive/%E7%94%BB%E5%83%8F/Codingal%20stuff/Web%20Development/Web-Development/Day%201/Cars.html">Images</a></div>
+            <div><a href="file:///C:/Users/ponnu/OneDrive/%E7%94%BB%E5%83%8F/Codingal%20stuff/Web%20Development/Web-Development/Day%201/Cars.html">Website</a></div>
+            <div><a href="file:///C:/Users/ponnu/OneDrive/%E7%94%BB%E5%83%8F/Codingal%20stuff/Web%20Development/Web-Development/Day%201/Cars.html">Contact</a></div>
+        </div>
+        <div class="div1"><p>A car, or an automobile, is a motor vehicle with wheels. Most definitions of cars state that they run
             primarily on
             roads, seat one to eight people, have four wheels, and mainly transport people rather than cargo. There are around
-            one billion cars in use worldwide.</p>
+            one billion cars in use worldwide.</p></div>
         <h3>Most popular Cars</h3>
-        <table border="5">
+        <div class="div2"><table border="5">
             <tr>
                 <th>Cars</th>
                 <th>Popularity</th>
@@ -48,12 +91,13 @@
             </tr>
             <br>
         </table>
-        <video width="300" height="200" controls autoplay>
+       <p>According to this, It means that most of the people use Racing Cars</p></div>
+        <div class="images"><video width="300" height="200" controls autoplay>
             <source src="184734-873923034_small.mp4" type="video/mp4">
         </video>
         <br>
         <iframe width="300" height="200">
             <source src="https://www.youtube.com/watch?v=ba7JNTI17uo" title="Youtube video player">
-        </iframe>
+        </iframe></div>
     </body>
 </html>
