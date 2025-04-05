@@ -3,12 +3,36 @@
 
 <head>
     <title>Pizza blog</title>
+    <style>
+    .grid-item1{grid-area: header;}
+    .grid-item2{grid-area: menu;}
+    .grid-item3{grid-area: main;}
+    .grid-item4{grid-area: footer;}
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-areas: 
+        'header header header header header'
+        'menu main main main main'
+        'menu footer footer footer footer'
+        ;
+        background-color: mediumseagreen;
+        padding: 10px;
+    }
+    .grid-container div{
+        background-color: chocolate;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid mediumseagreen;
+    }
+    </style>
 </head>
 
 <body>
-    <h1>Welcome to Pizza world</h1>
-    <strong>Where you can know many more about your Pizzas</strong>
-    <h2>
+    <div class="grid-container">
+    <div class="grid-item1"><h1>Welcome to Pizza world</h1>
+    <strong>Where you can know many more about your Pizzas</strong></div>
+    <div class="grid-item2"><h2>
         Pizza History
     </h2>
     <h3>The history of pizza began in antiquity, as various ancient cultures produced flatbreads with several toppings.
@@ -17,9 +41,9 @@
     </h3>
     <video width="300" height="200" controls autoplay>
         <source src="istockphoto-606042756-640_adpp_is.mp4" type="video/mp4">
-    </video>
+    </video></div>
     <br>
-    <h3>Recipe</h3>
+    <div class="grid-item3"><h3>Recipe</h3>
     <iframe width="300" height="200">
         <source src="https://www.youtube.com/watch?v=akIWCPt7ULs" type="Youtube video player">
     </iframe>
@@ -53,8 +77,9 @@
         <li>Fruits: Pineapple (some people like it!)</li>
         <li>Spices and Herbs: Oregano, basil, chili flakes, etc.</li>
     </ul>
-    </ol>
-    <h2>Thank you</h2>
+    </ol></div>
+    <div class="grid-item4"><h2>Thank you</h2></div>
+  </div>
 </body>
 
 </html>
