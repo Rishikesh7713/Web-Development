@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM in HTML</title>
+        <style>
+            .alert{
+                color: aqua;
+                background-color: red;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="heading">Welcome</h1>
+            <p>Hello</p>
+        </header>
+        <p>How are you?</p>
+        <script>
+            let div= document.createElement('div');
+            div.id= "paragraph"
+            div.className= "alert";
+            div.innerHTML= "<p>Congrats! You have made a Div</p>";
+            document.body.append(div)
+
+            let heading= document.getElementById("heading")
+            heading.innerHTML="&#128513"
+
+            document.queryselector('header p').innerHTML="<strong>Good Job!</strong>"
+        </script>
+    </body>
+</html>
