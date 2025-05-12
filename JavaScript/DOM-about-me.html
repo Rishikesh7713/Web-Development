@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me -DOM</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="heading">This is About me</h1>
+            <p id="year">On the year 2023</p>
+        </header>
+        <script>
+            let div= document.createElement('div');
+            div.id="Rishikesh"
+            div.className="G-6";
+            div.innerHTML="<p>Living in Kerala</p>";
+            document.body.append(div)
+
+            let heading=document.getElementById("heading")
+            heading.innerHTML="&#128514"
+            let year = document.getElementById("year")
+                year.innerHTML = "2025"
+
+                document.queryselector('header p').innerHTML="On the year 2025"
+        </script>
+    </body>
+</html>
