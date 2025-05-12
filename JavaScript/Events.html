@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Events in JavaScript</title>
+    <style>
+        body.dark{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Basement</h1>
+    <p id="story">I Actually wanted to find my friend. He was hiding in the basement</p>
+    <button onclick="goDark()">Get in the Mood</button>
+    <div class="textInput">Type your name here, if you dare;<input type="text" id="name"></div>
+    <button onclick="typeAndScream()">Please do not click me, NEVER!</button>
+    <button onclick="finishTheStory()">Tell me what Happened!</button>
+    <script>
+        function typeAndScream(){
+            var personName=document.getElementById("name").value;
+            alert("I said don't click this button" +personName)
+        }
+        function goDark(){
+         document.body.className="dark"
+        }
+        function finishTheStory(){
+         document.getElementById("story").innerHTML="So I searched the damp dungeon, There you are!"
+        }
+    </script>
+</body>
+</html>
