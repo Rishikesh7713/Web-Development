@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Colors</title>
+        <style>
+            .square{
+                border: 2px solid black;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <div class="square"></div>
+    <script>
+        let div= document.querySelector('.square')
+        div.onmouseenter=function(){
+            div.style.background="green"
+        }
+        div.onmouseout = function () {
+                div.style.background = "none"
+            }
+    </script>
+</html>
