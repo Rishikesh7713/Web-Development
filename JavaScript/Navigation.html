@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Navigation</title></head>
+    <body>
+        <h1>Interesting Topic</h1>
+        <nav>
+            <ul>
+                <li ><a href="Navigation.html">Home</a></li>
+                <li><a href="Capstone.html">About us</a></li>
+                <li><a href="JavaScript.html">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="tiger.jpg" alt="tiger">
+        <br>
+        <button onclick="tiger();">Read More!</button>
+        <p id="tiger-info"></p>
+        <img src="lion.jpg" alt="lion">
+        <br>
+        <button onclick="lion();">Read More!</button>
+        <p id="lion-info"></p>
+        <script>
+            function tiger(){
+                document.getElementById("tiger-info").innerHTML="Tigers can live in a range of environments, including the Siberian taiga, swamps, grasslands, and rainforests. They can be found anywhere from the Russian Far East to parts of North Korea, China, India, and Southwest Asia to the Indonesian island of Sumatra."
+            }
+            function lion(){
+                document.getElementById("lion-info").innerHTML="Lions live in a variety of habitats but prefer grassland, savanna, dense scrub, and open woodland. Historically, they lived across much of Europe, Asia, and Africa, but now they are mainly found in parts of Africa south of the Sahara."
+            }
+        </script>
+    </body>
+</html>
