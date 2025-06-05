@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Sign In</title>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <p>Enter your Username</p>
+    <input id="name" type="text">
+    <br>
+    <p>Enter your Password</p>
+    <input id="pass" type="password">
+    <br>
+    <button onclick="sign()" type="button">Sign In</button>
+    <script>
+        function sign(){
+         document.getElementById("text").innerHTML="You are Signed In!"
+        }
+        if(name="rishikesh"){
+            sign()
+        }
+        else{
+            document.getElementById("text").innerHTML="Username is Incorrect"
+        }
+        if (pass = "rishi123") {
+                sign()
+            }
+            else {
+                document.getElementById("text").innerHTML = "Password is Incorrect"
+            }
+    </script>
+    <h3 id="text"></h3>
+</body>
+</html>
