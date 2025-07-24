@@ -36,7 +36,7 @@ def initial_phonebook():
 
             phone_book.append(temp)
             print(phone_book)
-            return phone_book
+        return phone_book
 def menu():
     print("Now you can do it on this Phonebook")
     print("1. Add an Existing Contact")
@@ -64,7 +64,7 @@ def add_con(pb):
             if i==3:
              dip.append(str(input("Enter your Date of Birth: ")))
              pb.append(dip)
-            return pb
+        return pb
                
 def rem_existing():
             query=str(input("Enter the Name of Contact to be Searched"))
@@ -78,11 +78,17 @@ def rem_existing():
                      
                 if temp==0:
                     print("Sorry! you have entered invalid Query")
-                    return pb
+            return pb
                      
 def delete_all():
         return pb.clear()
-                     
+
+def thanks():
+     print("*****************************************")
+     print("Thanks for using Slambook")
+     print("Pls visit again")
+     print("*****************************************")
+
 print("............................................................................................")
 print("Hello dear User! Welcome to the Phonebook")
 print("Now you may Proceed")
@@ -98,12 +104,5 @@ while ch in(1, 2, 3, 4, 5):
          pb=rem_existing(pb)
     elif ch==3:
          pb=delete_all(pb)
-    
-
-
- 
-
-
-            
-
-        
+    else:
+         thanks()
