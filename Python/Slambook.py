@@ -17,7 +17,7 @@ def slambook():
      temp.append(str(input("Enter your Address")))
     text_slambook.append(temp)
     print(text_slambook)
-    return text_slambook
+   return text_slambook
 def menu():
  print("Now you can countinue here")
  print("1. Add a Name")
@@ -51,7 +51,7 @@ def rem_existing():
   
   if temp==0:
    print("Sorry!It is Invalid")
-   return sb
+ return sb
   
 def del_all():
  return pb.clear()
