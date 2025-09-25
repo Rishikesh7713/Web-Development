@@ -7,7 +7,7 @@ pygame.init()
 bg=pygame.transform.scale(pygame.image.load('download.jpg'),(sw,sh))
 font=pygame.font.SysFont("Times New Roman", fonts)
 
-class sprite:
+class sprite(pygame.sprite.Sprite):
    def __init__(self,color,width,height):
     super().__init__()
     self.image=pygame.Surface([width,height])
@@ -40,7 +40,7 @@ while running:
   if not won:
     keys=pygame.key.get_pressed()
     xchange=(keys[pygame.K_RIGHT]-keys[pygame.K_LEFT])*speed
-    ychange=(keys[pygame.K_UP]-keys[pygame.K_DOWN])*speed
+    ychange=(keys[pygame.K_DOWN]-keys[pygame.K_UP])*speed
     sp1.move(xchange,ychange)
 
     if sp1.rect.colliderect(sp2.rect):
