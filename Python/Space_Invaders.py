@@ -16,12 +16,16 @@ COLLISION_DISTANCE = 27
 
 # Initialize Pygame
 pygame.init()
+pygame.mixer.init()
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+gun=pygame.mixer.music.load('gun-shot-1-7069.mp3')
+pygame.mixer.music.set_volume(10)
 
 # Background
 background = pygame.image.load('Spacebg.jpg')
+bg=pygame.transform.scale(background,(800,500))
 
 # Caption and Icon
 pygame.display.set_caption("Space Invader")
@@ -29,7 +33,8 @@ icon = pygame.image.load('Spaceship.png')
 pygame.display.set_icon(icon)
 
 # Player
-playerImg = pygame.image.load('Spaceship.png')
+playerImg1 = pygame.image.load('Spaceship.png')
+playerImg=pygame.transform.scale(playerImg1,(100,100))
 playerX = PLAYER_START_X
 playerY = PLAYER_START_Y
 playerX_change = 0
@@ -43,14 +48,14 @@ enemyY_change = []
 num_of_enemies = 6
 
 for _i in range(num_of_enemies):
-    enemyImg.append(pygame.image.load('Enemy.png'))
+    enemyImg.append(pygame.transform.scale(pygame.image.load('Enemy.png'),(200,200)))
     enemyX.append(random.randint(0, SCREEN_WIDTH - 64))  # 64 is the size of the enemy
     enemyY.append(random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX))
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
 # Bullet
-bulletImg = pygame.image.load('Bullet.png')
+bulletImg = pygame.transform.scale(pygame.image.load('Bullet.png'),(20,20 ))
 bulletX = 0
 bulletY = PLAYER_START_Y
 bulletX_change = 0
@@ -86,6 +91,8 @@ def fire_bullet(x,y):
     global bullet_state
     bullet_state="fire"
     screen.blit(bulletImg,(x+16,y+10))
+    pygame.mixer.music.play()
+    
 
 def isCollision(enemyX,enemyY,bulletX,bulletY):
     distance=math.sqrt((enemyX-bulletX)**2  +  (enemyY-bulletY)**2)
@@ -94,7 +101,7 @@ def isCollision(enemyX,enemyY,bulletX,bulletY):
 running=True
 while running:
     screen.fill((0,0,0))
-    screen.blit(background,(0,0))
+    screen.blit(bg,(0,0))
     
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
@@ -148,4 +155,5 @@ while running:
     
     player(playerX,playerY)
     show_score(textX,textY)
+    
     pygame.display.update()
