@@ -1,0 +1,33 @@
+from tkinter import*
+win=Tk()
+win.title("Simple Interest Calculator")
+win.geometry("500x400")
+lbl1=Label(text="Hey There! This app will Calculate the Interest",bg="blue")
+lbl2=Label(text="You need to enter principle amount, rate, time")
+p=Label(text="Enter the Principle amount")
+pe=Entry()
+r=Label(text="Enter the Rate of Interest")
+re=Entry()
+t=Label(text="Enter the Time period in years")
+te=Entry()
+
+def dis():
+    pr=int(pe.get())    
+    ra=int(re.get()) 
+    ti=int(te.get()) 
+    res=(pr*ra*ti)/100
+    txt.insert(END,res)
+
+txt=Text(bg="red",fg="white")
+btn=Button(command=dis,text="Calculate",bg="green")
+lbl1.pack()
+lbl2.pack()
+p.pack()
+pe.pack()
+r.pack()
+re.pack()
+t.pack()
+te.pack()
+btn.pack()
+txt.pack()
+win.mainloop()
